@@ -7,5 +7,5 @@ class FlightViewSet(ModelViewSet):
     serializer_class = FlightSerializer
     
 class PassengerViewSet(ModelViewSet):
-    queryset = Passenger.objects.all()
+    queryset = Passenger.objects.all().order_by('last_name')
     serializer_class = PassengerSerializer
