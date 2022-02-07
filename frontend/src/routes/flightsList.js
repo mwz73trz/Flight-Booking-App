@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import flightBookingAPI from "../api/flightBookingAPI";
 import Flights from "../components/Flights";
 
@@ -25,6 +26,7 @@ export default function FlightsList() {
       >
         <Flights flights={flights} />
       </nav>
+      <Outlet />
     </div>
   );
 }

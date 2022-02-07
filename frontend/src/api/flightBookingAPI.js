@@ -21,14 +21,26 @@ const fetchFlights = async () => {
   return await tryCatchFetch(url);
 };
 
+const fetchFlightById = async (flightId) => {
+  const url = `${BASE_URL}flights/${flightId}/`;
+  return await tryCatchFetch(url);
+};
+
 const fetchPassengers = async () => {
   const url = `${BASE_URL}passengers/`;
   return await tryCatchFetch(url);
 };
 
+const fetchPassengerById = async (passengerId) => {
+  const url = `${BASE_URL}passengers/${passengerId}/`;
+  return await tryCatchFetch(url);
+};
+
 const myExports = {
   fetchFlights,
+  fetchFlightById,
   fetchPassengers,
+  fetchPassengerById,
 };
 
 export default myExports;

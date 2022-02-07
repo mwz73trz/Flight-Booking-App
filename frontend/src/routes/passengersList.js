@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import flightBookingAPI from "../api/flightBookingAPI";
 import Passengers from "../components/Passengers";
 
@@ -25,6 +26,7 @@ export default function PassengersList() {
       >
         <Passengers passengers={passengers} />
       </nav>
+      <Outlet />
     </div>
   );
 }
